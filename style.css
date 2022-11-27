@@ -4,15 +4,20 @@
     color:white;
 }
 
+:root{
+    --bg-color:#022433;
+    
+    
+}
+
 body{
-    background-color: #02121C;
+    background-color: #022433;
 
 }
 
 .container{
     width:100%;
     height:100vh;
-    /* background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(Home-imgs/blue-background.jpeg); */
     background-size:cover;
     background-position: center;
 }
@@ -28,6 +33,9 @@ header{
 
 }
 
+.team-name{
+    color :#22AD73;
+}
 .logo{
     
     background-color: FD7B08;
@@ -61,17 +69,17 @@ ul.navbar li a{
 }
 
 ul.navbar li a.active{
-    color:#FD7B08;
+    color:#22AD73;
 }
 
 ul.navbar li a:hover:not(.active){
-    color:#17A5B2;
+    color:#22AD73;
 }
 
 #contactBtn{
     width:150px;
     height:10vh;
-    background: #FD7B08;
+    background: #22AD73;
     border-radius: 15px;
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     padding-right:20px;
@@ -81,13 +89,17 @@ ul.navbar li a:hover:not(.active){
 
 }
 #contactBtn:hover{
-    background-color: #17A5B2;
+    background-color: #FD7B08;
 
 }
 
 #contactBtn:active{
     background-color: #17A5B2;
     transform: translateY(4px);
+}
+
+.hr{
+border: 2px solid white;
 }
 
 /* Header ends here */
@@ -101,10 +113,19 @@ ul.navbar li a:hover:not(.active){
     display: flex;
 }
 
+.slogan{
+    font-size: 80px;
+    font-style: bold;
+    color:#22AD73;
+}
+
+.subline{
+    color:white;
+}
 .left-section{
     width:40%;
-    margin-left: 10%;
-    margin-top:5%;
+    margin-left:10%;
+    margin-top:2%;
    
 }
 
@@ -127,9 +148,14 @@ ul.navbar li a:hover:not(.active){
     margin-top: 10%;
     margin-left: 10%;
     display: grid;
-    grid-template:
-    "Hayden Kaitlyn Evan" 150px
-    " Johnathan Kiona ." 150px;
+    gap: 1.5 rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+    "Hayden Kaitlyn Evan" 
+    " Johnathan Kiona ." ;
+
+    scroll-padding-block: 2rem;
+    margin-inline: auto;
     
 }
 
