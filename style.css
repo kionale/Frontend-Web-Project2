@@ -6,46 +6,299 @@
 
 :root{
     --bg-color:#022433;
-    
-    
-    
+}
+
+#myVideo{
+    position: fixed;
+    left:0;
+}
+
+.videoLayer{
+    position: fixed;
+    background-color: rgba(2, 36, 51, 0.9);
+    width: 100%;
+    height:100%;
+    left: 0;
 }
 
 body{
     background-color: #022433;
-
 }
 
-.container{
+.navbar{
     width:100%;
-    height:100vh;
-    background-size:cover;
-    background-position: center;
-}
-
-header{
-    width:100%;
-    z-index: 1000;
+    height:70px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
     background-color: #022433;
-    display:flex;
-    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    z-index: 9999;
     align-items: center;
-    /* padding: 30xp 18%; */
-    transition: ease .40s;
-
+    justify-content: space-between;
+    min-width:700px;
 }
 
-.team-name{
-    color :#22AD73;
-    font-size: 28px;
-    letter-spacing: 1px;
+.logocontainer{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 10%;
+    min-width:150px;
+    justify-content:flex-start;
+    margin-left: 50px;
 }
 
 #menu-icon{
-    color:#FD7B08;
-    font-size: 28px;
-    z-index: 10001;
+    color:#ffffff;
+    font-size: 0px;
     cursor:pointer;
+    visibility: hidden;
+}
+
+.teamLogo{
+    object-fit:contain;
+    width: 90%;
+}
+
+.navTeam{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    min-width:500px;
+    justify-content: space-between;
+    margin-right:2%;
+    height:100%;
+    margin-right: 1%;
+}
+
+.navMember{
+    margin:auto;
+    font-size: 14pt;
+    font-weight: 400;
+}
+
+.navHeading{
+    font-weight: 800;
+}
+
+
+.navLine{
+    margin:0%;
+    font-size: 18pt;
+}
+
+.navIcon{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 10%;
+    margin-right: 50px;
+    align-items: center;
+    height:100%;
+}
+
+.contactBtn{
+    object-fit: cover;
+    height:60%;
+}
+
+.hr{
+    position: fixed;
+    top: 62px;
+    left: 0px;
+    width: 100%;
+    border: 2px solid white;
+    z-index: 9999;
+}
+
+.mainBody{
+    position:absolute;
+    top: 74px;
+    left:0%;
+    width: 100%;
+    min-height: 1000px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width:800px;
+    top:30px;
+}
+
+.promoText{
+    font-size: 11vw;
+    margin-left: 50px;
+    margin-right:30px;
+    line-height: 110%;
+}
+
+.promotion{
+    left:0%;
+    width:85%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.promoHeading{
+    color:#22AD73
+}
+
+.bannerLeaf{
+    width:20%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.leafImage{
+    width: 80%;
+    object-fit: fit;
+    margin-bottom: 10%;
+}
+
+.socialMedia{
+    width: 6%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-end;
+}
+
+.socialIcon{
+    width: 40px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+.teampage{
+    width: 100%;
+    margin-top: calc(40px + 1vw);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.teamBar{
+    width: calc(100% - 80px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.barText{
+    font-size: calc(12px + 1.5vw);
+    padding: 8px 20px;
+}
+
+.barTeam{
+    background-color: #22AD73;
+    margin-left: 10px;
+    flex-grow:1;
+}
+
+.barBest{
+    background-color: white;
+    margin-right: 10px;
+    flex-grow:999;
+    color: #22AD73;
+    text-align: right;
+}
+
+.teamMember{
+    width: calc(100% - 100px);
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    gap: calc(10px + 1vw);
+    margin-bottom: 30px;
+}
+
+.member{    
+    margin-top: calc(10px + 2vw);
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.rev{
+    flex-direction: column-reverse;
+}
+.profilePic{
+    width: 100%;
+    aspect-ratio: 1/2;
+    background-color: #022433;
+    border-radius: 25px; 
+    position:relative;    
+}
+
+.profileName{
+    aspect-ratio: 3/1;
+    background-color: #ffffff;
+    border-radius: 25px 25px 0px 0px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(32, 32, 32, 0) 100%);  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8vw;
+    font-weight: 600;
+}
+
+.revName{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(32, 32, 32, 0) 100%);
+    border-radius: 0px 0px 25px 25px;
+}
+
+.memberKaitlyn{
+    background: linear-gradient(180deg, #22AD73 0%, #C6323E 100%);
+}
+
+.memberHayden{
+    background: linear-gradient(180deg, #22AD73 0%, #038090 100%);
+}
+
+.memberEvan{
+    background: linear-gradient(180deg, #22AD73 0%, #EF8A17 100%);
+}
+
+.memberKiona{
+    background: linear-gradient(180deg, #22AD73 0%, #7F397B 100%);
+}
+
+.memberJonathan{
+    background: linear-gradient(180deg, #22AD73 0%, #9BC53D 100%);
+}
+
+.memberPic{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    position:absolute; 
+    bottom: 0;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+.old{
+    visibility: hidden;
 }
 
 ul.navbar{
@@ -78,38 +331,16 @@ ul.navbar li a:hover:not(.active){
 }
 
 
-#contactBtn{
-    width:150px;
-    height:10vh;
-    background: #22AD73;
-    border-radius: 15px;
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
-    padding-right:20px;
-    cursor: pointer;
-    text-align: center;
-    font-size: 24;
 
-}
-#contactBtn:hover{
-    background-color: #FD7B08;
-
-}
 
 #contactBtn:active{
     background-color: #17A5B2;
     transform: translateY(4px);
 }
 
-.hr{
-border: 2px solid white;
-}
+
 
 /* Header ends here */
-.banner{
-
-    margin-left: 10%;
-    
-}
 
 .body{
     display: flex;
