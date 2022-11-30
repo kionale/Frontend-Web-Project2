@@ -8,6 +8,7 @@
     --bg-color:#022433;
 }
 
+
 #myVideo{
     position: fixed;
     left:0;
@@ -15,7 +16,7 @@
 
 .videoLayer{
     position: fixed;
-    background-color: rgba(2, 36, 51, 0.9);
+    background-color: rgba(2, 36, 51, 0.85);
     width: 100%;
     height:100%;
     left: 0;
@@ -79,7 +80,13 @@ body{
     margin:auto;
     font-size: 14pt;
     font-weight: 400;
+    text-decoration: none;
 }
+
+.navMember:hover{
+    color: #22AD73;
+}
+
 
 .navHeading{
     font-weight: 800;
@@ -121,6 +128,7 @@ body{
     left:0%;
     width: 100%;
     min-height: 1000px;
+    font-weight: 800;
 }
 
 .banner{
@@ -221,7 +229,7 @@ body{
     flex-direction: row;
     justify-content:space-evenly;
     gap: calc(10px + 1vw);
-    margin-bottom: 30px;
+    margin-bottom: calc(10px + 3vw);
 }
 
 .member{    
@@ -241,14 +249,14 @@ body{
     width: 100%;
     aspect-ratio: 1/2;
     background-color: #022433;
-    border-radius: 25px; 
+    border-radius: calc(5px + 1.5vw); 
     position:relative;    
 }
 
 .profileName{
     aspect-ratio: 3/1;
     background-color: #ffffff;
-    border-radius: 25px 25px 0px 0px;
+    border-radius: calc(5px + 1.5vw) calc(5px + 1.5vw) 0px 0px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(32, 32, 32, 0) 100%);  
     display: flex;
     flex-direction: row;
@@ -260,7 +268,7 @@ body{
 
 .revName{
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(32, 32, 32, 0) 100%);
-    border-radius: 0px 0px 25px 25px;
+    border-radius: 0px 0px calc(5px + 1.5vw) calc(5px + 1.5vw);
 }
 
 .memberKaitlyn{
@@ -289,153 +297,21 @@ body{
     object-fit: cover;
     position:absolute; 
     bottom: 0;
-    border-radius: 25px;
+    border-radius: calc(5px + 1.5vw);
 }
 
-
-
-
-
-
-.old{
-    visibility: hidden;
+.description{
+    width: calc(100% - 100px);
+    margin: 0px 50px 50px 50px;
 }
 
-ul.navbar{
-    display:flex;
-    list-style: none;
-
+.descHr{
+    border: 2px solid white;
 }
 
-ul.navbar li{
-    width:120px;
- 
-}
-
-ul.navbar li a{
-    text-decoration:none;
-    font-size: 20px;
-    color:white;
-    font-weight: bold;
-    padding:10px 22px;
-    border-radius: 4px;
-    transition: ease .40s;
-}
-
-ul.navbar li a.active{
-    color:#22AD73;
-}
-
-ul.navbar li a:hover:not(.active){
-    color:#22AD73;
-}
-
-
-
-
-#contactBtn:active{
-    background-color: #17A5B2;
-    transform: translateY(4px);
-}
-
-
-
-/* Header ends here */
-
-.body{
-    display: flex;
-}
-
-.slogan{
-    font-size: 80px;
-    font-style: bold;
-    color:#22AD73;
-}
-
-.subline{
-    color:white;
-}
-.left-section{
-    width:40%;
-    margin-left:10%;
-    margin-top:2%;
-   
-}
-
-#call-to-action{
-    width:190px;
-    height:10vh;
-    background: #FD7B08;
-    border-radius: 15px;
-    padding-right:20px;
-    cursor: pointer;
+.descText{
     text-align: center;
-    font-size: 16px;
+    padding: 4vw 12vw;
+    font-weight: 500;
+    font-size: calc(6pt + 1vw);
 }
-
-#call-to-action:hover{
-    background-color: #17A5B2;
-}
-
-.right-section{
-    margin-top: 10%;
-    margin-left: 10%;
-    display: grid;
-    gap: 1.5 rem;
-    grid-auto-columns: 1fr;
-    grid-template-areas:
-    "Hayden Kaitlyn Evan" 
-    " Johnathan Kiona ." ;
-
-    scroll-padding-block: 2rem;
-    margin-inline: auto;
-    
-}
-
-.teamMemberKaitlyn{
-    background-color: #7F397B;
-    grid-area:Kaitlyn;
-}
-
-.teamMemberHayden{
-    background-color: #17A5B2;
-    grid-area: Hayden;
-}
-
-.teamMemberEvan{
-    background-color:#CC2936;
-    grid-area:Evan;
-}
-
-.teamMemberJohnathan{
-    background-color:#9BC53D;
-    grid-area:Johnathan;
-}
-
-.teamMemberKiona{
-    background-color: #FD7B08;
-    grid-area:Kiona;
-}
-
-/* footer starts here */
-footer{
-    overflow: hidden;
-    
-    color: #D0D0D0;
-}
-
-.footer-body{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.footer-logo{
-    display: flex;
-    margin-top: 20%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
