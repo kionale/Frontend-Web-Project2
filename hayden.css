@@ -46,7 +46,6 @@ body{
     z-index: 9999;
     align-items: center;
     justify-content: space-between;
-    min-width:700px;
 }
 
 .logocontainer{
@@ -68,8 +67,10 @@ body{
 }
 
 .teamLogo{
-    object-fit:contain;
     width: 90%;
+    margin: 0;
+    align-items: center;
+    vertical-align: middle;
 }
 
 .navTeam{
@@ -77,11 +78,17 @@ body{
     flex-direction: row;
     align-items: center;
     width: 80%;
-    min-width:500px;
     justify-content: space-between;
     margin-right:2%;
     height:100%;
     margin-right: 1%;
+}
+
+@media only screen and (max-width: 750px){
+    .navTeam{
+        visibility: hidden;
+        width: 0px;
+    }
 }
 
 .navMember{
@@ -119,6 +126,11 @@ body{
 .contactBtn{
     object-fit: cover;
     height:60%;
+}
+
+.contactBtn:hover{
+    filter: invert(50%) sepia(97%) saturate(313%) hue-rotate(103deg) brightness(90%) contrast(100%);
+    cursor: pointer;
 }
 
 .hr{
@@ -213,6 +225,7 @@ body{
     position:absolute; 
     bottom: 0;
     border-radius: calc(5px + 1.5vw) calc(5px + 1.5vw) 0px 0px;
+    cursor: pointer;
 }
 
 /* Personal Detail */
@@ -294,15 +307,6 @@ body{
     width: calc(24px + 0.5vw);
     aspect-ratio: 1/1;
 }
-
-.infoBorderTop:hover .corner{
-    filter: invert(28%) sepia(97%) saturate(1665%) hue-rotate(164deg) brightness(88%) contrast(98%);
-}
-
-.infoBorderBottom:hover .corner{
-    filter: invert(28%) sepia(97%) saturate(1665%) hue-rotate(164deg) brightness(88%) contrast(98%);
-}
-
 
 .bottomCorner{
     position: absolute;
@@ -427,6 +431,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .project a{
@@ -445,7 +450,7 @@ body{
 
 .projectThumbnail{
     width: calc(100% - 4vw);
-    max-height:10vw;
+    max-height:13em;
     object-fit: cover;
     border-radius: calc(4px + 1vw);
     border-color: #ffffff;
@@ -475,6 +480,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .socialBtn:hover{
@@ -488,4 +494,71 @@ body{
 .socialIcon{
     height: 60%;
     aspect-ratio: 1/1;
+}
+
+/* Animation */
+
+.nameContainer{
+    opacity: 0;
+    animation: fadeinA 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeinA {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.profileContainer{
+    opacity: 0;
+    animation: fadeinB 2.5s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeinB {
+    from {transform: translate(0,5vw);}
+    to {transform: translate(0,0);}
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.infoBoxA{
+    opacity: 0;
+    animation: fadeinA 2.5s;
+    animation-delay: 2.3s;
+    animation-fill-mode: forwards;
+}
+
+.infoBoxB{
+    opacity: 0;
+    animation: fadeinA 2.5s;
+    animation-delay: 3.2s;
+    animation-fill-mode: forwards;
+}
+
+.infoBoxC{
+    opacity: 0;
+    animation: fadeinA 2.5s;
+    animation-delay: 4.1s;
+    animation-fill-mode: forwards;
+}
+
+.socialMedia{
+    opacity: 0;
+    animation: fadeinA 2.5s;
+    animation-delay: 5.0s;
+    animation-fill-mode: forwards;
+}
+
+body{
+    overflow: hidden;
+    animation: scrolling 0s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scrolling {
+    from {overflow: hidden;}
+    to {overflow:auto;}
 }
