@@ -1,3 +1,5 @@
+/* Global */
+
 @import url('https://fonts.google.com/specimen/Nunito?query=ni');
 *{
     font-family: 'Nunito', sans-serif;
@@ -8,18 +10,25 @@
     --bg-color:#022433;
 }
 
+/* Video */
+
 #myVideo{
     position: fixed;
     left:0;
+    height:100%;
+    width: 100%;
+    object-fit: fill;
 }
 
 .videoLayer{
     position: fixed;
-    background-color: rgba(2, 36, 51, 0.85);
+    background-color: rgba(2, 36, 51, 0.8);
     width: 100%;
     height:100%;
     left: 0;
 }
+
+/* Navbar */
 
 body{
     background-color: #022433;
@@ -121,6 +130,8 @@ body{
     z-index: 9999;
 }
 
+/* Main Body */
+
 .mainBody{
     position:absolute;
     top: 74px;
@@ -139,6 +150,8 @@ body{
     display: flex;
     flex-direction: row;
 }
+
+/* Sidebar */
 
 .sideBar{
     display: flex;
@@ -202,10 +215,277 @@ body{
     border-radius: calc(5px + 1.5vw) calc(5px + 1.5vw) 0px 0px;
 }
 
+/* Personal Detail */
+
 .information{    
     width: 70%;
-    height: 100%;
-    margin-left: 3vw;
+    height: calc(100% - 60px);
+    margin-left: 4vw;
     flex-grow: 1;
-    background-color:#22AD73;
+    padding: 30px 0px 30px 0px;
+    display: grid;
+    row-gap: 2vw;
+    column-gap: 2vw;
+    grid-template:
+    "a b" 5fr
+    "c c" 5fr
+    "d d" 1fr
+    ;
+    grid-template-columns: 1fr 1fr;
+}
+
+.infoBoxA{
+    grid-area:a;
+}
+   
+.infoBoxB{
+    grid-area:b;
+}
+
+.infoBoxC{
+    grid-area:c;
+}
+
+.socialMedia{
+    grid-area:d;
+    display: flex;
+    flex-direction: row;
+    padding: 0px 0vw 0px 0vw;
+    justify-content: space-between;
+    gap:2vw;
+    min-height: 6vh;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    .information{
+        display: grid;
+        grid-template:
+        "a a" 3fr
+        "b b" 3fr
+        "c c" 3fr
+        "d d" 0.8fr
+        ;
+    }
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 0vw 0px 0px;
+}
+
+.infoBorderTop{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    padding: 2vw 0 2vw 0;
+}
+
+.topCorner{
+    position:absolute;
+    top: 1vw;
+    left: 0;
+    width: calc(24px + 0.5vw);
+    aspect-ratio: 1/1;
+}
+
+.infoBorderTop:hover .corner{
+    filter: invert(28%) sepia(97%) saturate(1665%) hue-rotate(164deg) brightness(88%) contrast(98%);
+}
+
+.infoBorderBottom:hover .corner{
+    filter: invert(28%) sepia(97%) saturate(1665%) hue-rotate(164deg) brightness(88%) contrast(98%);
+}
+
+
+.bottomCorner{
+    position: absolute;
+    bottom: 1vw;
+    right: 0;
+    width: calc(24px + 0.5vw);
+    aspect-ratio: 1/1;
+}
+
+.infoTitle{
+    margin: 10px 3vw 10px 3vw;
+    font-size: calc(10pt + 0.5vw);
+    font-weight: 800;
+    width: 80%;
+    text-align: center;
+}
+
+.infoBody{
+    margin: 10px 3vw 10px 3vw;
+    font-size: calc(8pt + 0.5vw);
+    text-align: center;
+    line-height: 150%;
+    width: 80%;
+}
+
+/* Personal Detail (Education) */
+
+.infoYear{
+    font-weight: 800;
+    color: #22AD73;
+}
+
+.infoProgram{
+    font-style: italic;
+    
+}
+
+/* Personal Detail (Hobbies) */
+
+.infoBodyContainer{
+    display:flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+}
+
+.infoIconContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+    gap: 0.5vw;
+}
+
+.infoIcon{
+    width: 80%;
+    height: 5vw;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(100%);
+}
+
+.infoIconContainer p{
+    font-size: calc(2pt + 0.8vw);
+    vertical-align:text-top;
+    text-align: center;
+}
+
+/* Personal Detail (Project) */
+
+.infoBorderBottom{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    padding: 2vw 0 2vw 0;
+    gap: 2vw;
+}
+
+.infoProject{
+    width: 50%;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap: 1vw;
+}
+
+.infoProjectPic{
+    width: 50%;
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px){
+    .infoProject{
+        width: 100%;
+    }
+    .infoProjectPic{
+        visibility:hidden;
+        position: absolute;
+    }
+}
+
+.project{
+    width: 7vw;
+    aspect-ratio: 1/1;
+    border-radius: calc(5px + 1vw);
+    border-style:  solid;
+    border-color: #ffffff;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.project a{
+    font-size: 3vw;
+    font-weight: 800;
+    margin: 0;
+}
+
+.project:hover{
+    background-color: #ffffff;
+}
+
+.project:hover a{
+    color:#22AD73;
+}
+
+.projectThumbnail{
+    width: calc(100% - 4vw);
+    max-height:10vw;
+    object-fit: cover;
+    border-radius: calc(4px + 1vw);
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: calc(1pt + 0.2vw);
+}
+
+.projectDesc{
+    font-size: 1vw;
+    overflow-wrap: break-word;
+    font-size: calc(6pt + 0.5vw);
+    margin: 1vw;
+    font-weight: 800;
+}
+
+/* Social Media Buttons */
+
+.socialBtn{
+    height: calc(100% - 4px);
+    width: 30%;
+    flex-grow: 1;
+    border-radius: 100px;
+    border-color: #22AD73;
+    border-style: solid;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialBtn:hover{
+    background-color: #22AD73;
+}
+
+.socialBtn:hover .socialIcon{
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg) brightness(1000%) contrast(100%);
+}
+
+.socialIcon{
+    height: 60%;
+    aspect-ratio: 1/1;
 }

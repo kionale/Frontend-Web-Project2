@@ -12,7 +12,7 @@
 
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="Home-imgs/bg-video.mov" type="video/mp4">
+        <source src="Home-imgs/bg-video.mp4" type="video/mp4">
     </video>
     <div class="videoLayer"></div>
     <div class="navHeading">
@@ -50,13 +50,107 @@
                 </div>
                 <div class="profileContainer">
                     <div class="profileBg"></div>
-                    <img class="memberPic" src="Home-imgs/member-Hayden.png" alt="">
+                    <img onmouseover="changeA()" onmouseleave="changeB()" id="memberPic" class="memberPic" src="Home-imgs/member-Hayden.png" alt="">
                 </div>
             </div>
-            <div class="information"></div>
-    </div>
+            <div class="information">
+                <div class="infoBoxA infoContainer">
+                    <div class="infoBorderTop">
+                        <img class="topCorner corner" src="Hayden-imgs/top-corner.svg" alt="">
+                        <img class="bottomCorner corner" src="Hayden-imgs/bottom-corner.svg" alt="">
+                        <p class="infoTitle">Education</p>
+                        <p class="infoBody"><span class="infoYear">2015</span> CUHK<br><span class="infoProgram">Bachelor of Engineering in Information Engineering</span></p>
+                        <p class="infoBody"><span class="infoYear">2024</span> BCIT<br><span class="infoProgram">Diploma in Digital Design and Development</span></p>
+                    </div>
+                </div>
+                <div class="infoBoxB infoContainer">
+                    <div class="infoBorderTop">
+                        <img class="topCorner corner" src="Hayden-imgs/top-corner.svg" alt="">
+                        <img class="bottomCorner corner" src="Hayden-imgs/bottom-corner.svg" alt="">
+                        <div class="infoTitle">Hobbies</div>
+                        <div class="infoBodyContainer">
+                            <div class="infoIconContainer">
+                                <img class="infoIcon" src="Hayden-imgs/bowling-icon.svg" alt="">
+                                <p>Bowling</p>
+                            </div>
+                            <div class="infoIconContainer">
+                                <img class="infoIcon" src="Hayden-imgs/badminton-icon.svg" alt="">
+                                <p>Badminton</p>
+                            </div>
+                            <div class="infoIconContainer">
+                                <img class="infoIcon" src="Hayden-imgs/movie-icon.svg" alt="">
+                                <p>Movie</p>
+                            </div>
+                            <div class="infoIconContainer">
+                                <img class="infoIcon" src="Hayden-imgs/sleep-icon.svg" alt="">
+                                <p>Sleeping</p>
+                            </div>
+                            <div class="infoIconContainer">
+                                <img class="infoIcon" src="Hayden-imgs/ux-icon.svg" alt="">
+                                <p>Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infoBoxC infoContainer">
+                    <div class="infoBorderBottom">
+                        <img class="topCorner corner" src="Hayden-imgs/top-corner.svg" alt="">
+                        <img class="bottomCorner corner" src="Hayden-imgs/bottom-corner.svg" alt="">
+                        <div class="infoProject">
+                            <p class="infoTitle">Personal Projects</p>
+                            <div class="infoBodyContainer">
+                                <div class="project" onmouseenter="picA()" onmouseleave="picA()"">
+                                    <a >A</a>
+                                </div>
+                                <div class="project" onmouseenter="picB()" onmouseleave="picA()"">
+                                    <a >B</a>
+                                </div>
+                                <div class="project" onmouseenter="picC()" onmouseleave="picA()"">
+                                    <a >C</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="infoProjectPic">
+                            <img class="projectThumbnail" id="projectThumbnail" src="Hayden-imgs/project-1.png" alt="">
+                            <p class="projectDesc" id="projectDesc">Water Landscape Poster</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="socialMedia">
+                    <div class="socialBtn">
+                        <img class="socialIcon" src="Hayden-imgs/ins-icon.svg" alt="">
+                    </div>
+                    <div class="socialBtn">
+                        <img class="socialIcon" src="Hayden-imgs/twitter-icon.svg" alt="">
+                    </div>
+                    <div class="socialBtn">
+                        <img class="socialIcon" src="Hayden-imgs/gmail-icon.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
+    <script>
+        function changeA(){
+            document.getElementById("memberPic").src="Hayden-imgs/member-Hayden-real.png";
+        }
+        function changeB(){
+            document.getElementById("memberPic").src="Home-imgs/member-Hayden.png";
+        }
+        function picA(){
+            document.getElementById("projectThumbnail").src="Hayden-imgs/project-1.png";
+            document.getElementById("projectDesc").innerText="Water Landscape Poster";
+        }
+        function picB(){
+            document.getElementById("projectThumbnail").src="Hayden-imgs/project-2.png";
+            document.getElementById("projectDesc").innerText="Creative Drawing";
+        }
+        function picC(){
+            document.getElementById("projectThumbnail").src="Hayden-imgs/project-3.jpg";
+            document.getElementById("projectDesc").innerText="Pollution World Magazine Cover";
+        }
+    </script>
 
 
 </body>
