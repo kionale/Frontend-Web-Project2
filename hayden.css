@@ -63,7 +63,7 @@ body{
     color:#ffffff;
     font-size: 0px;
     cursor:pointer;
-    visibility: hidden;
+    visibility:hiddne;
 }
 
 .teamLogo{
@@ -82,12 +82,38 @@ body{
     margin-right:2%;
     height:100%;
     margin-right: 1%;
+    visibility:visible;
 }
+
 
 @media only screen and (max-width: 750px){
     .navTeam{
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 74px;
+        visibility:hidden;
+        z-index: 9999;
+    }
+    .navLine{
         visibility: hidden;
-        width: 0px;
+        height: 0;
+    }
+    .navMember{
+        background-color:#022433;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        border-bottom: #ffffff;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-color: #0a6756;
+        opacity: 99%;
+    }
+    .navTeam a:hover{
+        background-color: #22AD73;
+        color: white;
     }
 }
 
@@ -522,6 +548,10 @@ body{
     }
 }
 @media only screen and (max-width: 750px){
+    #menu-icon{
+        font-size: 40px;
+        visibility:visible;
+    }
     .mainBody{
         min-height:800px;
         min-width: 250px;
@@ -597,7 +627,7 @@ body{
         margin-top: 0px;
     }
     .infoIcon{
-        width: 40%;
+        width: 45%;
         justify-content:flex-end;
     }
     .infoIcon img{
@@ -609,7 +639,7 @@ body{
     }
 
     .infoIconContainer p{     
-        width: 60%;  
+        width: 55%;  
         text-align: left;
         margin: 0;
     }
