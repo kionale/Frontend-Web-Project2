@@ -70,25 +70,35 @@
                         <img class="topCorner corner" src="Hayden-imgs/top-corner.svg" alt="">
                         <img class="bottomCorner corner" src="Hayden-imgs/bottom-corner.svg" alt="">
                         <div class="infoTitle">Hobbies</div>
-                        <div class="infoBodyContainer">
+                        <div class="infoBodyContainerA">
                             <div class="infoIconContainer">
-                                <img class="infoIcon" src="Hayden-imgs/bowling-icon.svg" alt="">
+                                <div class="infoIcon">
+                                    <img src="Hayden-imgs/bowling-icon.svg" alt="">
+                                </div>
                                 <p>Bowling</p>
                             </div>
                             <div class="infoIconContainer">
-                                <img class="infoIcon" src="Hayden-imgs/badminton-icon.svg" alt="">
+                                <div class="infoIcon">
+                                    <img src="Hayden-imgs/badminton-icon.svg" alt="">
+                                </div>  
                                 <p>Badminton</p>
                             </div>
                             <div class="infoIconContainer">
-                                <img class="infoIcon" src="Hayden-imgs/movie-icon.svg" alt="">
+                                <div class="infoIcon">
+                                    <img  src="Hayden-imgs/movie-icon.svg" alt="">
+                                </div>
                                 <p>Movie</p>
                             </div>
                             <div class="infoIconContainer">
-                                <img class="infoIcon" src="Hayden-imgs/sleep-icon.svg" alt="">
+                                <div class="infoIcon">
+                                    <img  src="Hayden-imgs/sleep-icon.svg" alt="">
+                                </div>
                                 <p>Sleeping</p>
                             </div>
                             <div class="infoIconContainer">
-                                <img class="infoIcon" src="Hayden-imgs/ux-icon.svg" alt="">
+                                <div class="infoIcon">
+                                    <img src="Hayden-imgs/ux-icon.svg" alt="">
+                                </div>
                                 <p>Design</p>
                             </div>
                         </div>
@@ -100,21 +110,21 @@
                         <img class="bottomCorner corner" src="Hayden-imgs/bottom-corner.svg" alt="">
                         <div class="infoProject">
                             <p class="infoTitle">Personal Projects</p>
-                            <div class="infoBodyContainer">
-                                <div class="project" onmouseenter="picA()" onmouseleave="picA()"">
+                            <div class="infoBodyContainerB">
+                                <div  id="picA" class="project" onmouseenter="picA()" onmouseleave="picD()"">
                                     <a >A</a>
                                 </div>
-                                <div class="project" onmouseenter="picB()" onmouseleave="picA()"">
+                                <div  id="picB" class="project" onmouseenter="picB()" onmouseleave="picD()"">
                                     <a >B</a>
                                 </div>
-                                <div class="project" onmouseenter="picC()" onmouseleave="picA()"">
+                                <div  id="picC" class="project" onmouseenter="picC()" onmouseleave="picD()"">
                                     <a >C</a>
                                 </div>
                             </div>
                         </div>
                         <div class="infoProjectPic">
-                            <img class="projectThumbnail" id="projectThumbnail" src="Hayden-imgs/project-1.png" alt="">
-                            <p class="projectDesc" id="projectDesc">Water Landscape Poster</p>
+                            <img class="projectThumbnail" id="projectThumbnail" src="Hayden-imgs/project-0.png" alt="">
+                            <p class="projectDesc" id="projectDesc">Green is good for you</p>
                         </div>
                     </div>
                 </div>
@@ -132,6 +142,11 @@
             </div>
         </div>
     </div>
+    <!-- The Modal -->
+    <div id="pictureFrame" class="pictureFrame">
+        <span class="close">&times;</span>
+        <img class="fullPicture" id="fullPicture">
+    </div>
 
     <script>
         function changeA(){
@@ -142,17 +157,51 @@
         }
         function picA(){
             document.getElementById("projectThumbnail").src="Hayden-imgs/project-1.png";
-            document.getElementById("projectDesc").innerText="Water Landscape Poster";
+            document.getElementById("projectDesc").innerText="\"Water Landscape (Poster)\"";
+            document.getElementById("projectThumbnail").style.opacity="100%";
+            document.getElementById("projectDesc").style.opacity="100%";
         }
         function picB(){
             document.getElementById("projectThumbnail").src="Hayden-imgs/project-2.png";
-            document.getElementById("projectDesc").innerText="Creative Drawing";
+            document.getElementById("projectDesc").innerText="\"World End Station (Vector Drawing)\"";
+            document.getElementById("projectThumbnail").style.opacity="100%";
+            document.getElementById("projectDesc").style.opacity="100%";
         }
         function picC(){
             document.getElementById("projectThumbnail").src="Hayden-imgs/project-3.jpg";
-            document.getElementById("projectDesc").innerText="Pollution World Magazine Cover";
+            document.getElementById("projectDesc").innerText="\"Pollution World (Magazine Cover)\"";
+            document.getElementById("projectThumbnail").style.opacity="100%";
+            document.getElementById("projectDesc").style.opacity="100%";
         }
-    </script>
+        function picD(){
+            document.getElementById("projectThumbnail").src="Hayden-imgs/project-0.png";
+            document.getElementById("projectDesc").innerText="Green is good for you";
+            document.getElementById("projectThumbnail").style.opacity="20%";
+            document.getElementById("projectDesc").style.opacity="20%";
+        }
+
+        var picture = document.getElementById("pictureFrame");
+        var img = document.getElementById("projectThumbnail");
+        var btn = document.getElementById("picA")
+        var pictureImg = document.getElementById("fullPicture");
+        btn.onclick = function(){
+        picture.style.display = "flex";
+        pictureImg.src = img.src;
+        }
+        var btn = document.getElementById("picB")
+        btn.onclick = function(){
+        picture.style.display = "flex";
+        pictureImg.src = img.src;
+        }
+        var btn = document.getElementById("picC")
+        btn.onclick = function(){
+        picture.style.display = "flex";
+        pictureImg.src = img.src;
+        }
+        picture.onclick = function() { 
+        picture.style.display = "none";
+        }
+        </script>
 
 
 </body>
