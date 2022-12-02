@@ -87,6 +87,10 @@ body{
 
 
 @media only screen and (max-width: 750px){
+    #menu-icon{
+        font-size: 40px;
+        visibility:visible;
+    }
     .navTeam{
         flex-direction: column;
         position: absolute;
@@ -548,10 +552,6 @@ body{
     }
 }
 @media only screen and (max-width: 750px){
-    #menu-icon{
-        font-size: 40px;
-        visibility:visible;
-    }
     .mainBody{
         min-height:800px;
         min-width: 250px;

@@ -406,4 +406,95 @@ body{
         font-size: 40px;
         visibility:visible;
     }
+    .mainBody{
+        min-height:800px;
+        min-width: 250px;
+    }  
+    .banner{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .promotion{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        gap: 20px;
+    }
+    .promoText{
+        font-size: calc(6pt + 14vw);
+        text-align: center;
+        width: calc(100% - 100px);
+        margin:0;
+    }
+    .bannerLeaf{
+        align-items: center;
+        height: auto;
+        width: 45px;
+    }
+    .socialMedia{
+        flex-direction: row;
+        column-gap: 5vw;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .socialIcon{
+        margin: 0;
+    }
+    .barText{
+        font-size: calc(6pt + 2vw);
+        text-align: center;
+    }
+    .barBest{
+        flex-grow: 1;
+    }
+    .teamMember{
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 10px;
+    }
+    .member{
+        width: 100%;
+    }
+    .profilePic{
+        width:100%;
+        aspect-ratio: 1/1;
+    }
+    .profileCover{
+        width:100%;
+        aspect-ratio: 1/1; 
+    }
+    .profileCover p{
+        margin: 0;
+        font-size: 10vw;
+        text-align: center;
+    }
+    .memberPic{
+        width:100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+    .profileName{
+        aspect-ratio: 6/1;
+        font-size: 6vw;
+    }
+    .rev{
+        flex-direction: column;
+    }
+    .revName{
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(32, 32, 32, 0) 100%);
+        border-radius: calc(5px + 1.5vw) calc(5px + 1.5vw) 0px 0px ;
+    }
+    .member:hover .revName{
+        background: linear-gradient(180deg, rgba(34, 173, 115, 0.6) 0%, rgba(34, 173, 115, 0) 100%);
+    }
+    .descText{
+        font-size: calc(8pt + 2vw);
+    }
+    .description{
+        width: calc(100% - 100px);
+        margin: 30px 50px 50px 50px;
+    }
 }
