@@ -243,3 +243,10 @@ body{
 
 /* Personal Detail */
 
+.year{
+    color: #22AD73;
+}
+
+.bold{
+    font-weight: 800;
+}
