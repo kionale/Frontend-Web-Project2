@@ -115,6 +115,11 @@ body{
     height:60%;
 }
 
+.contactBtn:hover{
+    filter: invert(50%) sepia(97%) saturate(313%) hue-rotate(103deg) brightness(90%) contrast(100%);
+    cursor: pointer;
+}
+
 .hr{
     position: fixed;
     top: 62px;
@@ -158,10 +163,29 @@ body{
 }
 
 .Hobby{
-    margin-top: 10%;
+    
     flex-basis: 100%;
     
 }
+
+#hobby-text{
+    line-height: 1.6;
+    text-align: left;
+    margin-top: 10%;
+}
+
+.hobby-firstLetter{
+    color:#22AD73;
+    font-size: 80px;
+    font-weight: 600;
+}
+#hobby-title{
+text-transform: uppercase;
+letter-spacing: 5px;
+  text-decoration-line: overline underline;
+  text-decoration-color:#22AD73;
+  text-shadow: 0 0 10px #FD7B08;  
+ }
 
 .Hobby-row{
     display: flex;
@@ -180,13 +204,13 @@ body{
 
 
  .hobby-img{
-   
+   margin-top: 10%;
     height:500px;
     object-fit: contain;
     
 }
 .hobby-text{
-    margin-top: 15%;
+    margin-top: 10%;
     margin-right: 10%;
     margin-left: 10%;
     max-width :400px;
@@ -339,65 +363,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap:1rem;
-    align-content: center;
+    width: 0;
 
 }
 
-/* .grid-container{
-    display:grid;
-    gap:20px;
-    grid-auto-columns: 1fr;
-    grid-template-areas:
-    "hobby  hobby  hobby"
-    "profile  education project"
-    
-    ;
-    padding-block: 2rem;
-    width: min(95%, 70 rem);
-    margin-inline: auto;
-
-}
-
-.Personal-profile{
-    grid-area: profile;
-}
-
-.Education{
-    grid-area:education;
-}
-
-.Project{
-    
-grid-area:project;
-}
-
-.Hobby{
-   
-    grid-area:hobby;
-  
-}
-
-@media (min-width : 75em){
-    .grid-container{
-        grid-template-areas: 
-        "hobby" "profile"
-        "hobby" "profile"
-         "education" "project"
-        '
-        ;
-    }
-}
-
-
-@media (min-width : 50em){
-    .grid-container{
-        grid-template-areas:
-        'hobby'
-        'profile' 
-        'education'
-        'project' 
-        ;
-    }
-}
-
- */ 
