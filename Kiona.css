@@ -133,9 +133,8 @@ body{
     display: flex;
     gap:2rem;
     flex-wrap: wrap;
+    text-align: center;
 
-
-    
 }
 
 
@@ -143,10 +142,13 @@ body{
 
 /* select all the children of flex-container */
 .flex-container > * {
+    /* flex-grow and flex-shrink : 1 */
+    /* All the elements equally grow and shrink */
     flex: 1;
     
 }
 
+/* Responsive layout */
 @media (max-width: 600px){
     .flex-container{
     flex-direction: column;
@@ -156,7 +158,9 @@ body{
 }
 
 .Hobby{
+    margin-top: 10%;
     flex-basis: 100%;
+    
 }
 
 .Hobby-row{
@@ -222,6 +226,10 @@ body{
     object-fit: cover;
     border-radius: 50%;;
    
+}
+
+.school-text{
+    margin-top: 10%;
 }
 .project-img{
     margin-top: 5%;
@@ -293,11 +301,10 @@ body{
 }
 
 /* The dots/bullets/indicators */
-.slide-dot{
-    align-content: center;
-}
 
+ 
 .dot {
+    margin-top: 10%;
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -321,6 +328,19 @@ body{
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+.project-text{
+    margin-top: 10%;
+}
+
+/* Footer starts here */
+.social-media{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+    align-content: center;
+
 }
 
 /* .grid-container{

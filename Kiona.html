@@ -46,15 +46,13 @@
         <div class="flex-container">
             <div class="Hobby">
                 <div class="Hobby-row">
-                    <!-- <div class="hobbyImg">
+                    <div class="hobbyImg">
                         <img class="hobby-img" src="Kiona-imgs/hobby.png"
                             alt="An image of me standing in front of a mountain.">
-                    </div> -->
-                    <video id="myHobbyVideo" controls>
-                        <source src="Kiona-imgs/my-hobby.mp4" type="video/mp4">
-                    </video>
+                    </div>
+
                     <div class="home-text hobby-text">
-                        <h2>Snowboarding</h2>
+                        <h2>Hiking</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, similique odio porro
                             tempora, consequatur provident fugiat et pariatur officia harum vero nobis repellendus
                             facere rerum veniam, earum soluta quam natus?</p>
@@ -116,7 +114,7 @@
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
-                <div class="home-text project">
+                <div class="home-text project-text">
                     <h2>Project</h2>
                 </div>
 
@@ -124,6 +122,16 @@
         </div>
 
     </div>
+
+    <div class="footer">
+        <div class="social-media">
+            <a href="https://www.instagram.com/atoolred/?igshid=YmMyMTA2M2Y%3D">
+                <img src="Home-imgs/ins-logo.png" alt="Icon of Instagram"></a>
+            <a href="https://twitter.com">
+                <img src="Home-imgs/twitter-logo.png" alt=""></a>
+            <a href="https://myaccount.google.com">
+                <img src="Home-imgs/gmail-logo.png" alt=""></a>
+        </div>
     </div>
     <script type="text/javascript" scr=" ">
         let slideIndex = 1;
@@ -143,8 +151,13 @@
             let i;
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
+            if (n > slides.length)
+            // Go back to first slide
+            { slideIndex = 1 }
+            if (n < 1)
+            // Start from the last slide, going backward
+            { slideIndex = slides.length }
+
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
