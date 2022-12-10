@@ -256,6 +256,10 @@ letter-spacing: 5px;
    
 }
 
+.school-img:hover{
+  transform: scale(1.1);
+}
+
 .school-text{
     margin-top: 10%;
 }
@@ -374,9 +378,8 @@ letter-spacing: 5px;
 }
 
 .s-icons:hover{
- 
-  background-color:#22AD73;
-  transform: translateY(4px);
+  
+ transform: scale(1.1);
 
 }
 
