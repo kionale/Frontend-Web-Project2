@@ -405,4 +405,8 @@ body{
     .profileContainer{
         min-height: calc(120px + 60vw);
     }
+    .detailsContainer{
+        font-size: 5vw;
+        flex-grow: 1;
+    }
 }
