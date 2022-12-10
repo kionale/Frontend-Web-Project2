@@ -70,12 +70,103 @@
                         </div>
                     </div>
                     <div class="socialMedia">
-                            <img class="mediaIcon" src="Hayden-imgs/ins-icon.svg" alt="">
-                            <img class="mediaIcon" src="Hayden-imgs/twitter-icon.svg" alt="">
-                            <img class="mediaIcon" src="Hayden-imgs/gmail-icon.svg" alt="">
+                            <img src="Johnathan-imgs/twitter icon.svg" alt="">
+                            <img src="Johnathan-imgs/instagram icon.svg" alt="">
+                            <img src="Johnathan-imgs/gmail icon.svg" alt="">
                     </div>
+                </div>
+                <div class="slideshow">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img class="imgAdjust" src="Johnathan-imgs/project 1.jpg" class="">
+                        </div>
+    
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img class="imgAdjust" src="Johnathan-imgs/project 2.jpg" class="">
+                        </div>
+    
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img class="imgAdjust" src="Johnathan-imgs/project 3.jpg" class="">
+                        </div>
+                        <div class="slideshowButtons">
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        
+                        <div class="slideshowDots" slide-dot>
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                        </div>
+                        </div>
+                    </div>
+
+                    
                 </div>
             </div>
         </div>
+
+        <script type="text/javascript" scr=" ">
+            let slideIndex = 1;
+            showSlides(slideIndex);
+    
+            // Next/previous controls
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+    
+            // Thumbnail image controls
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+    
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length)
+                // Go back to first slide
+                { slideIndex = 1 }
+                if (n < 1)
+                // Start from the last slide, going backward
+                { slideIndex = slides.length }
+    
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+            window.onclick = function (event) {
+            if (!event.target.matches('.bx')) {
+                var dropdowns = document.getElementById("navTeam");
+                if (dropdowns.style.visibility == "visible" && window.innerWidth <= 750) {
+                    dropdowns.style.visibility = "hidden";
+                }
+            }
+            if (event.target.matches('.bx')) {
+                var dropdowns = document.getElementById("navTeam");
+                if (dropdowns.style.visibility == "visible") {
+                    dropdowns.style.visibility = "hidden";
+                } else {
+                    dropdowns.style.visibility = "visible";
+                }
+            }
+            }
+            function resize() {
+                if (window.innerWidth > 750) {
+                    document.getElementById("navTeam").style.visibility = "visible";
+                } else {
+                    document.getElementById("navTeam").style.visibility = "hidden";
+                }
+            }
+            window.addEventListener("resize", resize);
+        </script>
+
     </body>
 </html>
