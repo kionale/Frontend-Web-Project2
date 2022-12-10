@@ -372,7 +372,37 @@ body{
     margin-top: 5%;
 }
 
-.slideshowDots{
+.slideshowButtons{
     display: flex;
-    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+@media only screen and (min-width: 750px) and (max-width: 1000px){
+    .infoIconContainer p{
+        font-size: calc(6pt + 0.8vw);
+        margin-top: 20px;
+    }
+}
+@media only screen and (max-width: 750px){
+    .mainBody{
+        min-height:800px;
+        min-width: 250px;
+    }
+    .mainContainer{
+        flex-direction: column;
+    }
+    .nameContainer{
+        justify-content:space-around;
+    }
+    .memberName{    
+        font-size: 12vw;
+        flex-grow: 1;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+    .profileContainer{
+        min-height: calc(120px + 60vw);
+    }
 }
