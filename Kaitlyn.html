@@ -16,14 +16,12 @@
     </video>
     <div class="videoLayer"></div>
     <div class="navHeading">
-        <header>
-        </header>
         <div class="navbar">
             <div class="logocontainer">
                 <div class="bx bx-menu" id="menu-icon"></div>
-                    <a href="index.html">
-                        <img class="teamLogo" src="Home-imgs/team-logo.png" alt="">
-                    </a>            
+                <a href="index.html">
+                    <img class="teamLogo" src="Home-imgs/team-logo.png" alt="">
+                </a>
             </div>
             <div class="navTeam" id="navTeam">
                 <a href="index.html" class="navMember navHeading">Home</a>
@@ -38,7 +36,6 @@
                 <img class="contactBtn" src="Home-imgs/contact-icon.svg" alt="">
             </div>
         </div>
-        
     </div>
     <hr class="hr">
     
@@ -189,7 +186,32 @@ function back() {
     slide.src = `${imageArray[count]}`
  
 }
-    
+
+window.onclick = function (event) {
+    if (!event.target.matches('.bx')) {
+        var dropdowns = document.getElementById("navTeam");
+        if (dropdowns.style.visibility == "visible" && window.innerWidth <= 750) {
+            dropdowns.style.visibility = "hidden";
+        }
+    }
+    if (event.target.matches('.bx')) {
+        var dropdowns = document.getElementById("navTeam");
+        if (dropdowns.style.visibility == "visible") {
+            dropdowns.style.visibility = "hidden";
+        } else {
+            dropdowns.style.visibility = "visible";
+        }
+    }
+}
+function resize() {
+    if (window.innerWidth > 750) {
+        document.getElementById("navTeam").style.visibility = "visible";
+    } else {
+        document.getElementById("navTeam").style.visibility = "hidden";
+    }
+}
+window.addEventListener("resize", resize);
+
 </script>
 <footer>
 </footer>
